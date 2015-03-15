@@ -26,6 +26,7 @@
   - copy: src=dotfiles/vimrc.local dest=/Users/{{ ansible_user_id }}/.vimrc.local backup=yes
   - copy: src=dotfiles/vimrc.bundles.local dest=/Users/{{ ansible_user_id }}/.vimrc.bundles.local backup=yes
   - copy: src=dotfiles/tmux.conf.local dest=/Users/{{ ansible_user_id }}/.tmux.conf.local backup=yes
+  - copy: src=oh-my-zsh/custom dest=/Users/{{ ansible_user_id }}/.oh-my-zsh backup=yes
 
 - hosts: all
   roles:
