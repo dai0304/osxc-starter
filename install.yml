@@ -7,13 +7,47 @@
     - caskroom/fonts
     brew_packages:
     - git
+    - git-flow
     - zsh
     - vim
-#    - the_silver_searcher
-#    - ctags
+    #- the_silver_searcher
+    #- ctags
     - reattach-to-user-namespace
     - tmux
+    - jq
+    - go
+    - tree
+    - watch
+    - curl
+    - wget
+    - mysql
     cask_packages:
-#    - font-inconsolata-for-powerline
+    #- font-inconsolata-for-powerline
     - iterm2
-#    - macvim
+    #- macvim
+    - java
+    - dropbox
+    - karabiner
+    - google-chrome
+    - google-japanese-ime
+    - firefox
+    - mysqlworkbench
+    - alfred
+    - evernote
+    - omnifocus
+    - skype
+    - 1password
+    - arduino
+    - clipmenu
+    - daisydisk
+    - duet
+    - entropy
+    - fluid
+    - macpaw-gemini
+    - growlnotify
+    - intellij-idea-ce
+    #- intel-xdk-iot
+    - sublime-text
+    - macdown
+    - jitouch
+
