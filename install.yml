@@ -14,6 +14,7 @@
     #- ctags
     - reattach-to-user-namespace
     - tmux
+    - awscli
     - jq
     - go
     - tree
