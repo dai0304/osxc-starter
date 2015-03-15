@@ -21,6 +21,7 @@
     - watch
     - curl
     - wget
+    - colordiff
     - mysql
     cask_packages:
     #- font-inconsolata-for-powerline
