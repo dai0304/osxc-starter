@@ -18,6 +18,9 @@
   - role: osxc.repository
     clone_url: https://github.com/gmarik/vundle.git
     dest: /Users/{{ ansible_user_id }}/.vim/bundle/vundle
+  tasks:
+  - name: disable the sound effects on boot
+    command: /usr/bin/sudo /usr/sbin/nvram SystemAudioVolume=" "
   post_tasks:
   - copy: src=dotfiles/zshrc dest=/Users/{{ ansible_user_id }}/.zshrc backup=yes
   - copy: src=dotfiles/vimrc.local dest=/Users/{{ ansible_user_id }}/.vimrc.local backup=yes
