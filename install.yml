@@ -9,11 +9,11 @@
     - git
     - zsh
     - vim
-    - the_silver_searcher
-    - ctags
+#    - the_silver_searcher
+#    - ctags
     - reattach-to-user-namespace
     - tmux
     cask_packages:
-    - font-inconsolata-for-powerline
+#    - font-inconsolata-for-powerline
     - iterm2
-    - macvim
+#    - macvim
