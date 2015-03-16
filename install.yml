@@ -17,6 +17,7 @@
     - reattach-to-user-namespace
     - tmux
     # ==== additional packages ====
+    - aurl
     - awscli
     - colordiff
     - curl
@@ -34,6 +35,7 @@
     #- macvim
     # ==== additional packages ====
     - 1password
+    - adobe-reader
     - alfred
     - arduino
     - clipmenu
@@ -51,6 +53,7 @@
     - intellij-idea-ce
     - java
     - jitouch
+    - kindle
     - karabiner
     - macdown
     - macpaw-gemini
@@ -58,3 +61,10 @@
     - omnifocus
     - skype
     - sublime-text
+
+
+# Mac App Store
+# - DaisyDisk
+# - LINE
+# - Microsoft Remote Desktop
+# - SonicWALL Mobile Connect
