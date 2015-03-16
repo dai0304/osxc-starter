@@ -37,6 +37,11 @@
   tasks:
   - name: disable the sound effects on boot
     command: /usr/bin/sudo /usr/sbin/nvram SystemAudioVolume=" "
+  - name: set nohidden
+    command: sudo chflags nohidden {{ item }}
+    with_items:
+     - /usr
+     - /opt
   post_tasks:
   - copy: src=oh-my-zsh/custom dest=/Users/{{ ansible_user_id }}/.oh-my-zsh backup=yes
 
