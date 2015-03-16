@@ -36,9 +36,11 @@
       dest: /Users/{{ ansible_user_id }}/.zshrc
   tasks:
   - name: disable the sound effects on boot
-    command: /usr/bin/sudo /usr/sbin/nvram SystemAudioVolume=" "
+    command: /usr/sbin/nvram SystemAudioVolume=" "
+    sudo: yes
   - name: set nohidden
-    command: sudo chflags nohidden {{ item }}
+    command: chflags nohidden {{ item }}
+    sudo: yes
     with_items:
      - /usr
      - /opt

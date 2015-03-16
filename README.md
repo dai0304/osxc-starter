@@ -23,7 +23,7 @@ You can reach our (temporarily not updated and old) [website](http://osxc.github
 2. Easy_install pip, and then pip install Ansible: `sudo easy_install pip; sudo pip install ansible` (or `sudo pip install --upgrade ansible` if Ansible has already been installed via pip and needs upgrading to 1.8+)
 3. While that's happening [Fork original repo](https://github.com/osxc/starter/fork) and then clone your fork anywhere you want on your machine: `git clone https://github.com/<yourname>/starter.git ~/src/osxc; cd ~/src/osxc`
 4. Take a quick look at `configuration.yml` and `installation.yml` customizing to your liking.
-5. Start osxc with `ansible-galaxy install -r requirements.yml && ansible-playbook desktop.yml`
+5. Start osxc with `ansible-galaxy install -r requirements.yml && ansible-playbook desktop.yml -K`
 
 At the end, you'll only need to repeat step 5.
 
