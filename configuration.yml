@@ -44,6 +44,10 @@
     with_items:
      - /usr
      - /opt
+  - name: enable mysql startup
+    command: ln -sfv {{ item }} /Users/{{ ansible_user_id }}/Library/LaunchAgents
+    with_fileglob:
+    - /usr/local/opt/mysql/*.plist
   post_tasks:
   - copy: src=oh-my-zsh/custom dest=/Users/{{ ansible_user_id }}/.oh-my-zsh backup=yes
 
