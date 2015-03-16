@@ -18,16 +18,26 @@
   - role: osxc.repository
     clone_url: https://github.com/gmarik/vundle.git
     dest: /Users/{{ ansible_user_id }}/.vim/bundle/vundle
+  - role: osxc.repository
+    clone_url: https://github.com/dai0304/dotfiles.git
+    dest: /Users/{{ ansible_user_id }}/.dotfiles
+    links:
+    - src: gitconfig
+      dest: /Users/{{ ansible_user_id }}/.gitconfig
+    - src: gitignore
+      dest: /Users/{{ ansible_user_id }}/.gitignore
+    - src: tmux.conf.local
+      dest: /Users/{{ ansible_user_id }}/.tmux.conf.local
+    - src: vimrc.bundles.local
+      dest: /Users/{{ ansible_user_id }}/.vimrc.bundles.local
+    - src: vimrc.local
+      dest: /Users/{{ ansible_user_id }}/.vimrc.local
+    - src: zshrc
+      dest: /Users/{{ ansible_user_id }}/.zshrc
   tasks:
   - name: disable the sound effects on boot
     command: /usr/bin/sudo /usr/sbin/nvram SystemAudioVolume=" "
   post_tasks:
-  - copy: src=dotfiles/zshrc dest=/Users/{{ ansible_user_id }}/.zshrc backup=yes
-  - copy: src=dotfiles/vimrc.local dest=/Users/{{ ansible_user_id }}/.vimrc.local backup=yes
-  - copy: src=dotfiles/vimrc.bundles.local dest=/Users/{{ ansible_user_id }}/.vimrc.bundles.local backup=yes
-  - copy: src=dotfiles/tmux.conf.local dest=/Users/{{ ansible_user_id }}/.tmux.conf.local backup=yes
-  - copy: src=dotfiles/gitconfig dest=/Users/{{ ansible_user_id }}/.gitconfig backup=yes
-  - copy: src=dotfiles/gitignore dest=/Users/{{ ansible_user_id }}/.gitignore backup=yes
   - copy: src=oh-my-zsh/custom dest=/Users/{{ ansible_user_id }}/.oh-my-zsh backup=yes
 
 - hosts: all
