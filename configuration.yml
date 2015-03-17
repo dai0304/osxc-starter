@@ -44,6 +44,38 @@
     with_items:
      - /usr
      - /opt
+  - name: 'Finder: show extensions, path bar, ql selection, full path title, no extension change warnings'
+    command: defaults write {{ item }}
+    with_items:
+     - NSGlobalDomain AppleShowAllExtensions -bool true
+     - com.apple.finder ShowPathbar -bool true
+     - com.apple.finder QLEnableTextSelection -bool true
+     - com.apple.finder _FXShowPosixPathInTitle -bool true
+     - com.apple.finder FXEnableExtensionChangeWarning -bool false
+  - name: 'Dock: Autohide'
+    command: defaults write com.apple.dock autohide -bool true
+  - name: 'Hot corners'
+    command: defaults write {{ item }}
+    # Possible values:
+    #  0: no-op
+    #  2: Mission Control
+    #  3: Show application windows
+    #  4: Desktop
+    #  5: Start screen saver
+    #  6: Disable screen saver
+    #  7: Dashboard
+    # 10: Put display to sleep
+    # 11: Launchpad
+    # 12: Notification Center
+    with_items:
+      - com.apple.dock wvous-tl-corner -int 6
+      - com.apple.dock wvous-tl-modifier -int 0
+      - com.apple.dock wvous-tr-corner -int 5
+      - com.apple.dock wvous-tr-modifier -int 0
+      - com.apple.dock wvous-bl-corner -int 2
+      - com.apple.dock wvous-bl-modifier -int 0
+      - com.apple.dock wvous-br-corner -int 10
+      - com.apple.dock wvous-br-modifier -int 0
   - name: enable mysql startup
     command: ln -sfv {{ item }} /Users/{{ ansible_user_id }}/Library/LaunchAgents
     with_fileglob:
