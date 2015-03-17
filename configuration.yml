@@ -38,6 +38,44 @@
   - name: disable the sound effects on boot
     command: /usr/sbin/nvram SystemAudioVolume=" "
     sudo: yes
+  - name: delete localized files
+    command: rm -fr {{ item }}
+    with_items:
+    - /Applications/.localized
+    - /Applications/Utilities/.localized
+    - /Library/.localized
+    - /Library/Compositions/.localized
+    - /private/var/root/Library/.localized
+    - /System/.localized
+    - /System/Library/.localized
+    - /System/Library/Compositions/.localized
+    - /Users/.localized
+    - /Users/{{ ansible_user_id }}/Desktop/.localized
+    - /Users/{{ ansible_user_id }}/Documents/.localized
+    - /Users/{{ ansible_user_id }}/Downloads/.localized
+    - /Users/{{ ansible_user_id }}/Library/.localized
+    - /Users/{{ ansible_user_id }}/Library/Compositions/.localized
+    - /Users/{{ ansible_user_id }}/Library/Favorites/.localized
+    - /Users/{{ ansible_user_id }}/Library/Input Methods/.localized
+    - /Users/{{ ansible_user_id }}/Movies/.localized
+    - /Users/{{ ansible_user_id }}/Music/.localized
+    - /Users/{{ ansible_user_id }}/Pictures/.localized
+    - /Users/{{ ansible_user_id }}/Public/.localized
+    - /Users/{{ ansible_user_id }}/Public/Drop Box/.localized
+    - /Users/Guest/Desktop/.localized
+    - /Users/Guest/Documents/.localized
+    - /Users/Guest/Downloads/.localized
+    - /Users/Guest/Library/.localized
+    - /Users/Guest/Library/Compositions/.localized
+    - /Users/Guest/Library/Favorites/.localized
+    - /Users/Guest/Library/Input Methods/.localized
+    - /Users/Guest/Movies/.localized
+    - /Users/Guest/Music/.localized
+    - /Users/Guest/Pictures/.localized
+    - /Users/Guest/Public/.localized
+    - /Users/Guest/Public/Drop Box/.localized
+    - /Users/Shared/.localized
+    sudo: yes
   - name: set nohidden
     command: chflags nohidden {{ item }}
     sudo: yes
