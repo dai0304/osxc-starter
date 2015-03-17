@@ -32,3 +32,7 @@ alias gfhs='git flow hotfix start'
 alias gfhf='git flow hotfix finish'
 alias gfs='git flow support'
 alias gfss='git flow support start'
+
+# eclipse
+export ECLIPSE_APP_PATH='/Users/daisuke/Applications/eclipse/eclipse-jee-luna-SR2-macosx-cocoa-x86_64-main/Eclipse.app'
+alias eclipse='open $ECLIPSE_APP_PATH'
