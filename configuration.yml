@@ -106,9 +106,9 @@
     # 11: Launchpad
     # 12: Notification Center
     with_items:
-      - com.apple.dock wvous-tl-corner -int 6
+      - com.apple.dock wvous-tl-corner -int 5
       - com.apple.dock wvous-tl-modifier -int 0
-      - com.apple.dock wvous-tr-corner -int 5
+      - com.apple.dock wvous-tr-corner -int 6
       - com.apple.dock wvous-tr-modifier -int 0
       - com.apple.dock wvous-bl-corner -int 2
       - com.apple.dock wvous-bl-modifier -int 0
