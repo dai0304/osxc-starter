@@ -1,4 +1,5 @@
 ---
 # Your run is described here
 - include: install.yml
+- include: osxconfig.yml
 - include: configuration.yml

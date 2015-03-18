@@ -1,0 +1,83 @@
+---
+# Configure your Mac OS
+- hosts: all
+  tasks:
+  - name: disable the sound effects on boot
+    command: /usr/sbin/nvram SystemAudioVolume=" "
+    sudo: yes
+  - name: delete localized files
+    command: rm -fr {{ item }}
+    with_items:
+    - /Applications/.localized
+    - /Applications/Utilities/.localized
+    - /Library/.localized
+    - /Library/Compositions/.localized
+    - /private/var/root/Library/.localized
+    - /System/.localized
+    - /System/Library/.localized
+    - /System/Library/Compositions/.localized
+    - /Users/.localized
+    - /Users/{{ ansible_user_id }}/Desktop/.localized
+    - /Users/{{ ansible_user_id }}/Documents/.localized
+    - /Users/{{ ansible_user_id }}/Downloads/.localized
+    - /Users/{{ ansible_user_id }}/Library/.localized
+    - /Users/{{ ansible_user_id }}/Library/Compositions/.localized
+    - /Users/{{ ansible_user_id }}/Library/Favorites/.localized
+    - /Users/{{ ansible_user_id }}/Library/Input Methods/.localized
+    - /Users/{{ ansible_user_id }}/Movies/.localized
+    - /Users/{{ ansible_user_id }}/Music/.localized
+    - /Users/{{ ansible_user_id }}/Pictures/.localized
+    - /Users/{{ ansible_user_id }}/Public/.localized
+    - /Users/{{ ansible_user_id }}/Public/Drop Box/.localized
+    - /Users/Guest/Desktop/.localized
+    - /Users/Guest/Documents/.localized
+    - /Users/Guest/Downloads/.localized
+    - /Users/Guest/Library/.localized
+    - /Users/Guest/Library/Compositions/.localized
+    - /Users/Guest/Library/Favorites/.localized
+    - /Users/Guest/Library/Input Methods/.localized
+    - /Users/Guest/Movies/.localized
+    - /Users/Guest/Music/.localized
+    - /Users/Guest/Pictures/.localized
+    - /Users/Guest/Public/.localized
+    - /Users/Guest/Public/Drop Box/.localized
+    - /Users/Shared/.localized
+    sudo: yes
+  - name: set nohidden
+    command: chflags nohidden {{ item }}
+    sudo: yes
+    with_items:
+     - /usr
+     - /opt
+  - name: 'Finder: show extensions, path bar, ql selection, full path title, no extension change warnings'
+    command: defaults write {{ item }}
+    with_items:
+     - NSGlobalDomain AppleShowAllExtensions -bool true
+     - com.apple.finder ShowPathbar -bool true
+     - com.apple.finder QLEnableTextSelection -bool true
+     - com.apple.finder _FXShowPosixPathInTitle -bool true
+     - com.apple.finder FXEnableExtensionChangeWarning -bool false
+  - name: 'Dock: Autohide'
+    command: defaults write com.apple.dock autohide -bool true
+  - name: 'Hot corners'
+    command: defaults write {{ item }}
+    # Possible values:
+    #  0: no-op
+    #  2: Mission Control
+    #  3: Show application windows
+    #  4: Desktop
+    #  5: Start screen saver
+    #  6: Disable screen saver
+    #  7: Dashboard
+    # 10: Put display to sleep
+    # 11: Launchpad
+    # 12: Notification Center
+    with_items:
+      - com.apple.dock wvous-tl-corner -int 5
+      - com.apple.dock wvous-tl-modifier -int 0
+      - com.apple.dock wvous-tr-corner -int 6
+      - com.apple.dock wvous-tr-modifier -int 0
+      - com.apple.dock wvous-bl-corner -int 2
+      - com.apple.dock wvous-bl-modifier -int 0
+      - com.apple.dock wvous-br-corner -int 10
+      - com.apple.dock wvous-br-modifier -int 0
