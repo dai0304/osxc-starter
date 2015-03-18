@@ -7,7 +7,7 @@ alias -g L="|less"
 alias -g JQ="| jq \".\""
 alias -g UESDECODE="| sed -e 's/\\\\u\(....\)/\&#x\1;/g' | nkf --numchar-input"
 
-alias ls='ls -Fh'
+alias ls='ls -FhG'
 alias ll='ls -la'
 alias less='less -M -R'
 alias diff='colordiff'

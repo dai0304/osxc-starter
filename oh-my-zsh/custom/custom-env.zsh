@@ -3,6 +3,9 @@ export HISTTIMEFORMAT='%Y/%m/%d %H:%M:%S '
 export HISTCONTROL=ignoreboth
 export HISTSIZE=10000
 
+# http://d.hatena.ne.jp/edvakf/20080413/1208042916
+export LSCOLORS=gxfxcxdxbxegedabagacad
+
 # set the number of open files to be 1024
 ulimit -S -n 1024
 
