@@ -23,6 +23,7 @@
     - curl
     - git-flow
     - go
+    - gradle
     - jq
     - mysql
     - tree
@@ -70,3 +71,4 @@
 # - LINE
 # - Microsoft Remote Desktop
 # - SonicWALL Mobile Connect
+# - TweetDeck by Twitter
