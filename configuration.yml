@@ -42,13 +42,13 @@
     command: ln -sfv {{ item }} /Users/{{ ansible_user_id }}/Library/LaunchAgents
     with_fileglob:
     - /usr/local/opt/mysql/*.plist
-#  - name: setup anyenv
-#    command: /Users/{{ ansible_user_id }}/.anyenv/bin/anyenv install {{ item }}
-#    with_items:
-#    - rbenv
   post_tasks:
   - copy: src=oh-my-zsh/custom dest=/Users/{{ ansible_user_id }}/.oh-my-zsh backup=yes
 
 - hosts: all
   roles:
   - osxc.common-env
+
+# anyenv install rbenv
+# rbenv install 2.1.0
+# sudo gem install bundler
