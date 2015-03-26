@@ -6,6 +6,7 @@
     brew_taps:
     - homebrew/dupes
     - caskroom/fonts
+    - caskroom/versions
     - classmethod-aws/cm
     brew_packages:
     # ==== essential packages ====
@@ -53,6 +54,7 @@
     #- intel-xdk-iot
     - intellij-idea-ce
     - java
+    - java6
     - jing
     - jitouch
     - kindle
