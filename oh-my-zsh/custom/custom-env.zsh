@@ -12,7 +12,7 @@ ulimit -S -n 1024
 # ==== Java
 export JAVA_HOME="$(/usr/libexec/java_home)"
 #export JAVA_HOME="$(/usr/libexec/java_home -v '1.7*')"
-export _JAVA_OPTIONS="-Dfile.encoding=UTF-8"
+#export _JAVA_OPTIONS="-Dfile.encoding=UTF-8"
 
 # ==== vim
 # export EDITOR=/Applications/MacVim.app/Contents/MacOS/Vim
