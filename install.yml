@@ -20,8 +20,10 @@
     # ==== additional packages ====
     - aurl
     - awscli
+    - boot2docker
     - colordiff
     - curl
+    - docker
     - git-flow
     - go
     - gradle
@@ -44,7 +46,7 @@
     - daisydisk
     - duet
     - dropbox
-    - entropy
+    #- entropy
     - evernote
     - firefox
     - fluid
@@ -54,6 +56,7 @@
     #- intel-xdk-iot
     - intellij-idea-ce
     - java
+    - java7
     - java6
     - jing
     - jitouch
@@ -72,6 +75,7 @@
 
 # Mac App Store
 # - DaisyDisk
+# - Entropy
 # - LINE
 # - Microsoft Remote Desktop
 # - SonicWALL Mobile Connect
