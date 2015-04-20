@@ -27,8 +27,11 @@
     - git-flow
     - go
     - gradle
+    - groff
     - jq
     - mysql
+    - nkf
+    - sbt
     - tree
     - watch
     - wget
@@ -73,8 +76,15 @@
     - tether
     - virtualbox
 
+# [npm]
+# npm install -g json2yaml
+# npm install -g yaml2json
 
-# Mac App Store
+# [gem]
+# bundler
+# aws-sdk-v1
+
+# [Mac App Store]
 # - DaisyDisk
 # - Entropy
 # - LINE
