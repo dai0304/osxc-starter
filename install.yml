@@ -5,6 +5,7 @@
   - role: osxc.packages
     brew_taps:
     - homebrew/dupes
+    - homebrew/binary
     - caskroom/fonts
     - caskroom/versions
     - classmethod-aws/cm
@@ -31,6 +32,7 @@
     - jq
     - mysql
     - nkf
+    - packer
     - sbt
     - tree
     - watch
