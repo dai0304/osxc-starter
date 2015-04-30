@@ -32,7 +32,9 @@
     - jq
     - mysql
     - nkf
+    - p7zip
     - packer
+    - remarshal
     - sbt
     - tree
     - watch
