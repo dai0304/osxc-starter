@@ -34,6 +34,7 @@
     - nkf
     - p7zip
     - packer
+    - postgresql
     - remarshal
     - sbt
     - tree
