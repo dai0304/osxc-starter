@@ -30,6 +30,7 @@
     - gradle
     - groff
     - jq
+    - maven
     - mysql
     - nkf
     - p7zip
@@ -92,8 +93,10 @@
 # [Mac App Store]
 # - DaisyDisk
 # - Entropy
+# - Growl
 # - LINE
 # - Microsoft Remote Desktop
+# - Monotony
 # - SonicWALL Mobile Connect
 # - Tweetbot
 # - TweetDeck by Twitter
