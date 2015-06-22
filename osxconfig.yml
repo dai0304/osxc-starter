@@ -57,8 +57,15 @@
      - com.apple.finder QLEnableTextSelection -bool true
      - com.apple.finder _FXShowPosixPathInTitle -bool true
      - com.apple.finder FXEnableExtensionChangeWarning -bool false
+  - name: 'Screenshot filename'
+    command: defaults write {{ item }}
+    with_items:
+      - com.apple.screencapture name "screenshot"
+      - com.apple.screencapture location ~/Dropbox/Private/screenshots
   - name: 'Dock: Autohide'
     command: defaults write com.apple.dock autohide -bool true
+  - name: 'Dock: Mineffect'
+    command: defaults write com.apple.dock mineffect suck
   - name: 'Hot corners'
     command: defaults write {{ item }}
     # Possible values:
