@@ -76,11 +76,13 @@
     - mysqlworkbench
     - omnifocus
     - omnigraffle
+    - qlvideo
     - skitch
     - skype
     - sublime-text
     - tether
     - virtualbox
+    - vlc
 
 # [npm]
 # npm install -g json2yaml
