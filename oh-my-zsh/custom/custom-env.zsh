@@ -14,9 +14,6 @@ export JAVA_HOME="$(/usr/libexec/java_home)"
 #export JAVA_HOME="$(/usr/libexec/java_home -v '1.7*')"
 #export _JAVA_OPTIONS="-Dfile.encoding=UTF-8"
 
-# ==== vim
-# export EDITOR=/Applications/MacVim.app/Contents/MacOS/Vim
-
 # ==== aws-cli
 export AWS_PATH=$HOME/bin/aws
 export AWS_HOME=$HOME/.aws
@@ -35,9 +32,15 @@ export GRADLE_OPTS="-Dorg.gradle.daemon=true -Xmx1024m -Xms256m -XX:+CMSClassUnl
 export MAVEN_OPTS="-Xmx1024M"
 
 # ==== docker
-export DOCKER_HOST=tcp://$(boot2docker ip):2376
-export DOCKER_CERT_PATH=$HOME/.boot2docker/certs/boot2docker-vm
+export DOCKER_HOST=tcp://$(docker-machine ip default):2376
+export DOCKER_CERT_PATH=$HOME/.docker/machine/machines/default
+export DOCKER_MACHINE_NAME=default
 export DOCKER_TLS_VERIFY=1
+
+# ==== homebrew
+if [ -f ~/.homebrew_github_api_token ];then
+  source ~/.homebrew_github_api_token
+fi
 
 # ==== other
 bindkey '^R' history-incremental-pattern-search-backward

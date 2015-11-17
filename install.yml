@@ -21,11 +21,13 @@
     # ==== additional packages ====
     - aurl
     - awscli
-    - boot2docker
     - colordiff
+    - coreutils
     - curl
+    - dfu-util
     - docker
     - git-flow
+    - gnu-getopt
     - go
     - gradle
     - groff
@@ -53,6 +55,7 @@
     - arduino
     - clipmenu
     - daisydisk
+    - dockertoolbox
     - duet
     - dropbox
     #- entropy
@@ -81,7 +84,7 @@
     - skype
     - sublime-text
     - tether
-    - virtualbox
+    #- virtualbox
     - vlc
 
 # [npm]

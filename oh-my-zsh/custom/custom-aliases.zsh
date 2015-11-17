@@ -18,7 +18,7 @@ alias diff='colordiff'
 alias wholediff="diff --new-line-format='+%L' --old-line-format='-%L' --unchanged-line-format=' %L'"
 
 alias be='bundle exec'
-alias dnsflush='dscacheutil -flushcache'
+alias dnsflush='sudo killall -HUP mDNSResponder'
 
 # Git flow
 alias gff='git flow feature'
