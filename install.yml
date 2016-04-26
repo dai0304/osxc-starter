@@ -8,7 +8,8 @@
     - homebrew/binary
     - caskroom/fonts
     - caskroom/versions
-    - classmethod-aws/cm
+    - phinze/homebrew-cask
+    - classmethod/repos
     brew_packages:
     # ==== essential packages ====
     - git
@@ -79,9 +80,11 @@
     - mysqlworkbench
     - omnifocus
     - omnigraffle
+    - qlmarkdown
     - qlvideo
     - skitch
     - skype
+    - slack
     - sublime-text
     - tether
     #- virtualbox
