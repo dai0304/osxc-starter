@@ -9,6 +9,7 @@
     - caskroom/fonts
     - caskroom/versions
     - phinze/homebrew-cask
+    - sanemat/font
     - classmethod/repos
     brew_packages:
     # ==== essential packages ====
@@ -28,7 +29,12 @@
     - dfu-util
     - docker
     - git-flow
+    - git-secrets
+    - glide
     - gnu-getopt
+    - gnupg
+    - gpg-agent
+    - pinentry-mac
     - go
     - gradle
     - groff
@@ -40,6 +46,7 @@
     - packer
     - postgresql
     - remarshal
+    - ricty
     - sbt
     - tree
     - watch
@@ -53,6 +60,7 @@
     - 1password
     - adobe-reader
     - alfred
+    - amazon-music
     - arduino
     - clipmenu
     - daisydisk
